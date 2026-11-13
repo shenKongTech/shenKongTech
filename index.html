@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>课程中心 · NEXUS AI</title>
+  <meta name="description" content="NEXUS AI —— 以等级与经验值驱动的 AI 知识学习与研究平台">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%237c5cff'/%3E%3Cstop offset='1' stop-color='%2322d3ee'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='16' fill='%230b1020'/%3E%3Cpath d='M18 46V18l14 14 14-14v28' stroke='url(%23g)' stroke-width='6' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="assets/css/style.css?v=32">
+</head>
+<body>
+  <div class="bg-decor" aria-hidden="true">
+    <span class="blob blob-a"></span>
+    <span class="blob blob-b"></span>
+    <span class="blob blob-c"></span>
+    <span class="grid-lines"></span>
+  </div>
+
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar">
+      <a class="brand" href="#/dashboard">
+        <span class="brand-mark">
+          <svg viewBox="0 0 32 32" fill="none"><path d="M7 24V8l9 9 9-9v16" stroke="url(#brandGrad)" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"></path><defs><linearGradient id="brandGrad" x1="7" y1="8" x2="25" y2="24"><stop stop-color="#a78bfa"></stop><stop offset="1" stop-color="#22d3ee"></stop></linearGradient></defs></svg>
+        </span>
+        <span class="brand-text">
+          <strong>NEXUS<span>AI</span></strong>
+          <small>学习 · 专注 · 进化</small>
+        </span>
+      </a>
+
+      <nav class="nav" id="nav">
+        <a class="nav-item" href="#/dashboard" data-nav="dashboard">
+          <svg viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="7" height="7" rx="2"></rect><rect x="14" y="3" width="7" height="7" rx="2"></rect><rect x="3" y="14" width="7" height="7" rx="2"></rect><rect x="14" y="14" width="7" height="7" rx="2"></rect></svg>
+          <span>学习总览</span>
+        </a>
+        <a class="nav-item active" href="#/courses" data-nav="courses">
+          <svg viewBox="0 0 24 24" fill="none"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v15H6.5A2.5 2.5 0 0 0 4 20.5V5.5Z"></path><path d="M4 20.5A2.5 2.5 0 0 1 6.5 18H20v3H6.5"></path><path d="M8 7h8M8 11h5"></path></svg>
+          <span>课程中心</span>
+        </a>
+        <a class="nav-item" href="#/papers" data-nav="papers">
+          <svg viewBox="0 0 24 24" fill="none"><path d="M6 3h9l4 4v14H6V3Z"></path><path d="M14 3v5h5"></path><path d="M9 13h7M9 17h5"></path></svg>
+          <span>论文库</span>
+        </a>
+        <a class="nav-item" href="#/notes" data-nav="notes">
+          <svg viewBox="0 0 24 24" fill="none"><path d="M4 4h11l5 5v11H4V4Z"></path><path d="M15 4v5h5"></path><path d="M8 13h8M8 17h5"></path></svg>
+          <span>笔记库</span>
+        </a>
+        <a class="nav-item" href="#/resources" data-nav="resources">
+          <svg viewBox="0 0 24 24" fill="none"><path d="M12 3 3 8l9 5 9-5-9-5Z"></path><path d="m3 12 9 5 9-5"></path><path d="m3 16 9 5 9-5"></path></svg>
+          <span>学习资源</span>
+        </a>
+        <a class="nav-item" href="#/focus" data-nav="focus">
+          <svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="13" r="8"></circle><path d="M12 9v4l2.5 2.5M9 2h6M12 2v3"></path></svg>
+          <span>专注计时</span>
+        </a>
+        <a class="nav-item" href="#/assistant" data-nav="assistant">
+          <svg viewBox="0 0 24 24" fill="none"><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M18.4 5.6l-2.1 2.1M7.7 16.3l-2.1 2.1"></path><circle cx="12" cy="12" r="3.2"></circle></svg>
+          <span>智能助手</span>
+        </a>
+      </nav>
+
+      <div class="sidebar-foot">
+        <div class="daily-goal" id="daily-goal"><div class="daily-goal-top"><span>今日经验</span><b>已达标 · 145</b></div><div class="progress"><div class="progress-fill" style="width:100%"></div></div></div>
+        <a class="user-mini" id="user-mini" href="#/profile" title="进入个人中心" aria-label="进入个人中心"><div class="avatar avatar-sm">探</div><div><div class="u-name">探索者</div><div class="u-lv">Lv.0 · 一窍不通</div></div><div class="u-xp">145</div></a>
+      </div>
+    </aside>
+
+    <div class="main">
+      <header class="topbar">
+        <button class="icon-btn mobile-menu-btn" data-action="toggle-sidebar" aria-label="打开菜单">
+          <svg viewBox="0 0 24 24" fill="none"><path d="M4 6h16M4 12h16M4 18h16"></path></svg>
+        </button>
+        <div class="topbar-title" id="topbar-title">课程中心</div>
+        <div class="topbar-right">
+          <div class="streak-pill" id="streak-pill" title="连续学习天数"><svg class="ui-ico" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.4-.5-2.1-1-3.1-1.1-2.1-.2-4 2-5.9.5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.2.4-2.3 1-3a2.5 2.5 0 0 0 2.5 2.5Z"></path></svg> <b>1</b> 天</div>
+          <div class="xp-pill" id="xp-pill" title="总经验值"><span class="xp-dot"></span><b>145</b> XP</div>
+          <a class="avatar avatar-sm" href="#/profile" id="top-avatar">探</a>
+        </div>
+      </header>
+
+      <main class="page" id="app"></main>
+    </div>
+
+    <div class="sidebar-backdrop" data-action="toggle-sidebar"></div>
+  </div>
+
+  <div class="toast-wrap" id="toast-wrap" aria-live="polite"></div>
+  <div id="modal-root"></div>
+
+  <script src="assets/js/data.js?v=32"></script>
+  <script src="assets/js/core.js?v=32"></script>
+  <script src="assets/js/pages-learn.js?v=32"></script>
+  <script src="assets/js/pages-space.js?v=32"></script>
+  <script src="assets/js/pages-assistant.js?v=32"></script>
+  <script src="assets/js/app.js?v=32"></script>
+
+
+
+
+
+</body></html>
